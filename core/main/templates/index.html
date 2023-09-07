@@ -1,0 +1,31 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>aaaaa</title>
+</head>
+<body>
+      <div class="filter">
+        {% for i in category_list %}
+            <button data-category="{{ i.name }}">{{ i.name }}</button>  
+        {% endfor %}
+    </div>
+
+    <div class="gallery">
+        {% for i in product_list %}
+            {% for j in i.abc.all %}
+        <div class="image" data-category="{{ i.name }}">
+            <p>{{ j.name }}</p>
+            <img src="{{ j.img.url }}" alt="Nature Image">
+            <p>{{ j.price }}</p>
+        </div>
+            {% endfor %}
+        {% endfor %}
+    </div>
+    <script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>
