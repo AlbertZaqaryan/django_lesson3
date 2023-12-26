@@ -1,6 +1,6 @@
 name: CI-CD-Pipeline-to-AWS-ElasticBeastalk
 env:
-  EB_PACKAGE_S3_BUCKET_NAME : "elasticbeanstalk-us-east-1-816866992221"
+  EB_PACKAGE_S3_BUCKET_NAME : "cicd.bucket.django"
   EB_APPLICATION_NAME       : "gitAction"
   EB_ENVIRONMENT_NAME       : "GitAction-env"
   DEPLOY_PACKAGE_NAME       : "django_app_${{ github.sha }}.zip"
