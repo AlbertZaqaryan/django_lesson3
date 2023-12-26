@@ -4,7 +4,7 @@ env:
   EB_APPLICATION_NAME       : "gitAction"
   EB_ENVIRONMENT_NAME       : "GitAction-env"
   DEPLOY_PACKAGE_NAME       : "django_app_${{ github.sha }}.zip"
-  AWS_REGION_NAME           : "us-east"
+  AWS_REGION_NAME           : "us-east-1"
 
 on: 
   push:
